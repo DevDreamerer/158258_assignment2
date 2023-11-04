@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+/* 引入字体 */
+@font-face {
+    font-family: cac;
+    src: url('/wwwroot/font/cac_champagne.woff') format('woff');
+}
+
+/* 中间大块 */
+section{
+    flex: 1;
+    background-color: rgb(244, 244, 210);
+    padding:0px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 欢迎标语 */
+section .Welcome{
+    background-color:rgb(206, 232, 189) ;
+    font-weight: bold;
+    font-family: cac;
+    font-size: 30px;
+    word-spacing: 10px;
+    text-align: center;
+    color: black;
+    z-index: 1;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    line-height: 165%;
+}
+
+/* 图片轮播块 */
+.rotation-container {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.rotation_ul,
+.rotation-item {
+    padding-bottom: 40%;
+    list-style-type: none;
+}
+
+.rotation-item {
+    position: absolute;
+    width: 100%;
+    background-size: 100%;
+    animation: fade 20s linear;
+    animation-iteration-count: infinite;
+}
+
+/* 设置背景图片 */
+.rotation-item1 {
+    background-image: url(/wwwroot/img/environment11.jpg);
+    background-size: 100% 100%;
+}
+
+.rotation-item2 {
+    background-image: url(/wwwroot/img/environment7.jpg);
+    background-size: 100% 100%;
+}
+
+.rotation-item3 {
+    background-image: url(/wwwroot/img/environment13.jpg);
+    background-size: 100% 100%;
+}
+
+.rotation-item4 {
+    background-image: url(/wwwroot/img/environment10.jpg);
+    background-size: 100% 100%;
+}
+
+.rotation-item5 {
+    background-image: url(/wwwroot/img/environment12.jpg);
+    background-size: 100% 100%;
+}
+
+/* 设置动画 */
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.rotation-item {
+    opacity: 0;
+}
+
+.rotation-item1 {
+    animation-delay: -1s;
+}
+
+.rotation-item2 {
+    animation-delay: 3s;
+}
+
+.rotation-item3 {
+    animation-delay: 7s;
+}
+
+.rotation-item4 {
+    animation-delay: 11s;
+}
+
+.rotation-item5 {
+    animation-delay: 15s;
+}
+
+/* 轮播焦点块 */
+.focus-container {
+    position: absolute;
+    bottom: 2%;
+    z-index: 7;
+    left: 80%;
+    margin-left: -45px;
+}
+
+.focus-container li {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+
+.focus-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0;
+    background: #51B1D9;
+    border-radius: inherit;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+}
+
+.focus-item1 {
+    animation-delay: -1s;
+}
+
+.focus-item2 {
+    animation-delay: 3s;
+}
+
+.focus-item3 {
+    animation-delay: 7s;
+}
+
+.focus-item4 {
+    animation-delay: 11s;
+}
+
+.focus-item5 {
+    animation-delay: 15s;
+}
+
+.picture img {
+    height: 150px;
+    width: 100%;
+}
+
+section div{
+    z-index: -1;
+}
+
+/* 中间的第二部分 */
+main{
+    display: flex;
+    z-index: 1;
+}
+
+/* 左边 */
+main .information{
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+}
+
+main img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 20px;
+}
+
+.information span{
+    display: block;
+    flex: 1;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgb(106, 152, 106);
+    border-radius: 10%;
+}
+
+.information span a{
+    text-decoration: none;
+    color: rgb(202, 172, 126);
+}
+
+.information span a:hover{
+    font-weight: bold;
+    background-color: rgb(101, 92, 77);
+    color: white;
+    text-decoration: solid;
+}
+
+/* 中间 */
+.importance{
+    flex: 1;
+    /* border: 2px dotted green; */
+    border-radius: 5%;
+    margin-left: 3px;
+    margin-right: 3px;
+    position: relative;
+    background-color: rgba(235, 235, 187, 0.5);
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.importance h1{
+    text-align: center;
+}
+
+.importance p{
+    text-align: justify;
+    padding: 5px;
+    font-family: Castellar;
+}
+
+/* 手风琴 */
+.importance .content{
+    display: none;
+}
+.importance .content:target{
+    display: block;
+}
+
+.importance div a{
+    /* text-decoration:wavy; */
+    /* border: 1px solid rgb(0, 81, 128); */
+    margin: 3px;
+    border-radius: 7px;
+    font-family: Calisto MT;
+    color: black;
+    /* text-shadow: 0px 0px 10px #51B1D9; */
+}
+
+.importance div div{
+    color:green;
+    text-align: left;
+}
+
+.importance div{
+    margin-bottom: 2%;
+    padding-left: 4%;
+    padding-top: 1%;
+}
+
+/* 重要符号 */
+.importance .pic{
+    position: absolute;
+    right: 5px;
+    bottom: 20px;
+}
+
+.importance .pic img{
+    width: 50%;
+    height: 50%;
+
+}
+
+/* 右边 */
+.video{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.video .h{
+    display: flex;
+    width: 100%;
+    background-color: rgba(243, 229, 213, 0.4);
+}
+
+.video video{
+    flex: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.video .pic{
+    float: left;
+}
+
+.video .sentence{
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    font-style: italic;
+}
+
+.video .pic img{
+    padding-top: 10%;
+    width: 80%;
+    height: 30%;
+}
+
+/* 第三部分 */
+figure .h{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color:rgb(189, 232, 189) ;
+    font-family: Cascadia Code;
+}
+
+figure .share{
+    overflow: scroll;
+    white-space: nowrap;
+    background-color: rgba(185, 231, 246, 0.4);
+}
+
+figure .share img{
+    margin: 10px;
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    /* border: 2px solid green; */
+ }
+
+

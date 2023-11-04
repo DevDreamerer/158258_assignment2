@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EarthSavers Online</title>
+    <link rel="stylesheet" href="~/wwwroot/css/layout.css">
+    <script type="text/javascript"
+            src="https://api.map.baidu.com/api?v=3.0&ak=UnG6Sq717VsAl0IaWQcH8Xs4WwTqFCRk"></script>
+</head>
+
+<body>
+    <div class="box">
+        <header>
+            <div>
+                <img src="~/wwwroot/img/protect.png" alt="">
+                <span>EarthSavers Online</span>
+            </div>
+            <div class="nav navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Home" && ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">@Html.ActionLink("Homepage", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <!-- Repeat this for other links -->
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Home" && ViewContext.RouteData.Values["Action"].ToString() == "Problem" ? "active" : "")">@Html.ActionLink("Desdruction cases", "Problem", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <!-- Repeat this for other links -->
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Home" && ViewContext.RouteData.Values["Action"].ToString() == "Protection" ? "active" : "")">@Html.ActionLink("Protection", "Protection", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <!-- Repeat this for other links -->
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "AboutUs" && ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">@Html.ActionLink("About us", "Index", "AboutUs", new { area = "" }, new { @class = "nav-link" })</li>
+
+
+                    @*<li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Continents" && ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">@Html.ActionLink("Continents", "Index", "Continents", new { area = "" }, new { @class = "nav-link" })</li>*@
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Endangereds" && ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">@Html.ActionLink("Endangered Species", "Index", "Endangereds", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
+
+                
+
+            </div>
+            <script src="~/wwwroot/js/nav.js"></script>
+            @*<div>
+
+                @using (Html.BeginForm("Index", "Endangereds", FormMethod.Get, new
+                {
+                    @class =
+"navbar-form navbar-left"
+                }))
+                {
+                    <div class="form-group">
+                        @Html.TextBox("Search", null, new
+                        {
+                            @class = "form-control",
+                            @placeholder =
+                        "Search Endangred species"
+                        })
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                }
+
+
+
+            </div>*@
+        </header>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <footer>
+            <h3>Contact us</h3>
+            <div class="d1">
+                <div class="one">
+                    <img src="~/wwwroot/img/youxiang.png" alt="">
+                    <address> <a href="mailto:sgreer@example.com/">EarthSaversOnline@example.com</a></address>
+                </div>
+                <div class="two">
+                    <p>Scan QR code and follow us</p>
+                    <img src="~/wwwroot/img/QR.png" alt="">
+                </div>
+            </div>
+            <div class="d2">
+                <img src="~/wwwroot/img/dizhi.png" alt="" class="pic">
+                <div class="map">
+                    <div id="container">
+                        <script>
+                            var map = new BMap.Map("container");
+                            var point = new BMap.Point(116.37, 39.92);
+                            map.centerAndZoom(point, 15);
+                            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+                            map.addControl(new BMap.NavigationControl());
+                            map.addControl(new BMap.ScaleControl());
+                            map.addControl(new BMap.OverviewMapControl());
+
+                            var marker = new BMap.Marker(point);        // 创建标注
+                            map.addOverlay(marker);                     // 将标注添加到地图中
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+
+</html>

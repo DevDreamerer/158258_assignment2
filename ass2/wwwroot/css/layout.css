@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+/* 引入字体 */
+@font-face {
+    font-family: cac;
+    src: url('/wwwroot/font/cac_champagne.woff') format('woff');
+}
+
+/* 头部 */
+header {
+    height: 50px;
+    background-color: rgb(98, 141, 98);
+    display: flex;
+    justify-content: space-around;
+}
+
+    /* 第一个div */
+    header:first-child {
+        position: relative;
+    }
+
+        /* 头部图片设置 */
+        header:first-child img {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 5px;
+        }
+
+        header:first-child span {
+            color: white;
+            line-height: 50px;
+            margin-left: 50px;
+        }
+
+/* 头部中间的超链接 */
+.nav ul {
+    list-style-type: none;
+}
+
+    .nav ul li {
+        float: left;
+        color: white;
+        line-height: 50px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+        .nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+            .nav ul li:hover {
+                color: #43170354;
+                font-weight: bold;
+            }
+
+            .nav ul li.active {
+                font-weight: bold;
+                background-color: green;
+            }
+
+
+/* 底部 */
+footer {
+    width: 100%;
+    background-color: rgb(98, 141, 98);
+    display: flex;
+    flex-direction: column;
+    background-image: url(/wwwroot/img/protect.png);
+    background-repeat: no-repeat;
+    background-size: 5%;
+    background-position: left top;
+}
+
+    footer h3 {
+        margin-top: 2%;
+        text-align: center;
+        color: rgb(107, 88, 47);
+        word-spacing: 100px;
+        font-size: 150%;
+        font-family: Castellar;
+        font-weight: bold;
+    }
+
+    footer .d1 {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+        footer .d1 .one {
+            display: flex;
+        }
+
+        footer .d1 img {
+            width: 10%;
+        }
+
+        footer .d1 address {
+            margin-top: 5%;
+        }
+
+            footer .d1 address a {
+                color: rgb(240, 199, 128);
+                font-size: 120%;
+            }
+
+        footer .d1 .two p {
+            color: rgb(240, 199, 128);
+            font-size: 120%;
+            margin-bottom: 2%;
+        }
+
+        footer .d1 .two img {
+            margin-left: 20%;
+        }
+
+    footer .d2 {
+        margin-bottom: 10px;
+    }
+
+        footer .d2 .pic {
+            width: 5%;
+            margin-left: 45%;
+        }
+
+    footer .d2, .d1, .title {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+        footer .d2 .map {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        footer .d2 #container {
+            width: 100%;
+            height: 300px;
+        }

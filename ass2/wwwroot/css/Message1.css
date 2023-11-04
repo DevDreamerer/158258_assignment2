@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 调整视频大小以适应屏幕，可能会裁剪部分内容 */
+}
+
+.nav{
+    z-index: 1;
+}
+
+.nav button{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    background-color: transparent;
+    border: transparent;
+}
+
+.nav button img{
+    width: 50px;
+}
+
+#list {
+    display: none;
+    background-color: rgba(242, 242, 171, 0.4);
+    padding: 10px;
+    position: absolute;
+    left: 10px;
+    top: 150px;
+    border-radius: 5px;
+}
+
+#list a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#list a:hover{
+    font-weight: bold;
+}
+
+.container {
+    z-index: 1;
+    background-color: rgba(242, 242, 171, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.container h1 {
+    text-align: center;
+    color: rgb(60, 44, 17);
+    font-family: Algerian;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: block;
+    color: rgb(60, 44, 17);
+    font-family: Constantia;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(60, 44, 17);
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.input-group textarea {
+    height: 100px;
+}
+
+.clear-button {
+    float: right;
+    background-color: rgb(169, 207, 238);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.clear-button:hover{
+    font-weight: bold;
+    background-color: #b6ea8b;
+}
+
+.submit-button, .record-button {
+    background-color: rgb(169, 207, 238);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit-button:hover, .record-button:hover{
+    background-color: rgb(230, 190, 148);
+}
+
+.record-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.record-content {
+    background-color: rgba(230, 190, 148, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 80%;
+}
+
+.record-popup-close {
+    text-align: right;
+}
+
+.record-popup-close button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}

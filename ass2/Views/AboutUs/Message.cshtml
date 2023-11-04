@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "Message";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave your Message</title>
+    <link rel="stylesheet" href="~/wwwroot/css/Message1.css">
+</head>
+
+<body>
+
+    <video autoplay muted loop>
+        <source src="~/wwwroot/vedio/video3.mp4" type="video/mp4">
+        <!-- 添加其他视频格式，以提供跨浏览器兼容性 -->
+    </video>
+    <!-- 页面其他内容放在这里 -->
+
+    <div class="nav">
+        <button id="button"><img src="~/wwwroot/img/zhuye2.jpg" alt="">Go back to</button>
+        <div id="list">
+
+            <a>@Html.ActionLink(">>Homepage", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</a>
+            <a>@Html.ActionLink(">>Destruction cases", "Problem", "Home", new { area = "" }, new { @class = "nav-link" })</a>
+            <a> @Html.ActionLink(">>Protection", "Protection", "Home", new { area = "" }, new { @class = "nav-link" })</a>
+            <a>@Html.ActionLink(">>About us", "Index", "AboutUs", new { area = "" }, new { @class = "nav-link" })</a>
+            <a>@Html.ActionLink(">>Endangered Species", "Index", "Endangereds", new { area = "" }, new { @class = "nav-link" })</a>
+        </div>
+    </div>
+
+    <script src="~/wwwroot/js/Message_nav.js"></script>
+
+
+    <div class="container">
+        <h1>Leave your Message</h1>
+        <div class="input-group">
+            <label for="nickname">Name:</label>
+            <input type="text" id="nickname">
+        </div>
+        <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+        </div>
+        <div class="input-group">
+            <label for="phone">Telephone:</label>
+            <input type="tel" id="phone">
+        </div>
+        <div class="input-group">
+            <label for="textarea">Message:</label>
+            <textarea id="textarea"></textarea>
+            <button class="clear-button" onclick="clearTextarea()">Clear Message</button>
+        </div>
+        <button class="submit-button" onclick="submitForm()">Submit</button>
+        <button class="record-button" onclick="showRecords()">History</button>
+    </div>
+
+    <!-- Record Popup -->
+    <div class="record-popup" id="recordPopup">
+        <div class="record-content">
+            <div class="record-popup-close">
+                <button onclick="closeRecords()">Close</button>
+            </div>
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Telephone</th>
+                    <th>Message</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="~/wwwroot/js/Message2.js"></script>
+</body>
+
+</html>
+

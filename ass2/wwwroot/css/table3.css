@@ -1,0 +1,61 @@
+﻿.main {
+    margin: 0;
+    padding: 10%;
+    background: linear-gradient(135deg,#f1dfb3, #ade3dc);
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+/* 标题样式 */
+h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+/* 水平分隔线样式 */
+hr {
+    border: none;
+    border-top: 1px solid #ade3dc;
+}
+
+
+/* 对整个 dl 元素应用样式 */
+.dl-horizontal {
+    list-style: none;  
+    margin-top: 5%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    grid-gap: 5%;  
+    margin-bottom:5%;
+}
+
+    /* 对 dt 元素应用样式 */
+    .dl-horizontal dt {
+        font-weight: bold;
+        text-align: right;
+        margin: 5%;
+    }
+
+    /* 对 dd 元素应用样式 */
+    .dl-horizontal dd {
+        margin: 5%;
+        padding: 0;
+    }
+
+/* 调整链接的样式 */
+a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: #378c2f;
+}
+
+    /* 鼠标悬停链接时的样式 */
+    a:hover {
+        text-decoration: underline;  
+    }
+
+/* 调整段落的样式 */
+.p-links p {
+    margin: 10px 0;  
+}

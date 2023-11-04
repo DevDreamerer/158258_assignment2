@@ -1,0 +1,142 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="~/wwwroot/css/AboutUs1.css">
+    <script type="text/javascript"
+            src="https://api.map.baidu.com/api?v=3.0&ak=UnG6Sq717VsAl0IaWQcH8Xs4WwTqFCRk"></script>
+</head>
+
+<body>
+    <div class="box">
+        <header>
+            <div>
+                <img src="~/wwwroot/img/protect.png" alt="">
+                <span>EarthSavers Online</span>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Home" && ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">@Html.ActionLink("Homepage", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <!-- Repeat this for other links -->
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Home" && ViewContext.RouteData.Values["Action"].ToString() == "Problem" ? "active" : "")">@Html.ActionLink("Desdruction cases", "Problem", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <!-- Repeat this for other links -->
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Home" && ViewContext.RouteData.Values["Action"].ToString() == "Protection" ? "active" : "")">@Html.ActionLink("Protection", "Protection", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <!-- Repeat this for other links -->
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "AboutUs" && ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">@Html.ActionLink("About us", "Index", "AboutUs", new { area = "" }, new { @class = "nav-link" })</li>
+
+                    <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Endangereds" && ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">@Html.ActionLink("Endangered Species", "Index", "Endangereds", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+            <script src="~/wwwroot/js/nav.js"></script>
+            <div class="log">
+                <a>@Html.ActionLink("Leave Message", "Message", "AboutUs", new { area = "" }, new { @class = "nav-link" })</a>
+            </div>
+        </header>
+
+        <section>
+            <div class="Welcome">
+                <a> @Html.ActionLink("About us >> Homepage", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</a>
+            </div>
+
+
+            <div class="bottom">
+                <div class="left">
+                    <div class="joinus">
+                        <p class="p1">JOIN US</p>
+                        <p class="p2">
+                            Click on the 'Leave Mesage' button in the upper right corner of the page to
+                            join us. We'll send a quickly reply.
+                        </p>
+                    </div>
+                    <div class="contact">
+                        <div class="d1">contact information</div>
+                        <div class="d2">
+                            <img src="~/wwwroot/img/dianhua.png" alt="">
+                            <address><a href="tel: (304) 555-7120">(304) 555-7120</a></address>
+                        </div>
+                        <div class="d3">
+                            <img src="~/wwwroot/img/youxiang.png" alt="">
+                            <address> <a href="mailto:sgreer@example.com/">EarthSaversOnline@example.com</a></address>
+                        </div>
+                        <div class="d4">
+                            <img src="~/wwwroot/img/dizhi.png" alt="" class="pic">
+                            <div class="map">
+                                <div id="container">
+                                    <script>
+                                        var map = new BMap.Map("container");
+                                        var point = new BMap.Point(116.37, 39.92);
+                                        map.centerAndZoom(point, 15);
+                                        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+                                        map.addControl(new BMap.NavigationControl());
+                                        map.addControl(new BMap.ScaleControl());
+                                        map.addControl(new BMap.OverviewMapControl());
+
+                                        var marker = new BMap.Marker(point);        // 创建标注
+                                        map.addOverlay(marker);                     // 将标注添加到地图中
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="heading">Our Experience</div>
+                    <p>
+                        We take great pride in our extensive experience and unwavering commitment to environmental
+                        conservation. For many years, we have been dedicated to safeguarding our planet's precious
+                        ecosystems and natural resources. Our journey began with a simple vision: to create a
+                        sustainable and harmonious coexistence between humanity and the environment. <br><br>
+                        Over the years, we have consistently worked on a wide range of projects and initiatives
+                        aimed at preserving and restoring the Earth's fragile balance. Our dedicated team of
+                        experts, environmentalists, and passionate individuals have tirelessly championed the cause
+                        of environmental protection. Together, we have achieved numerous milestones and made a
+                        significant impact on the world around us. <br><br>
+                        Our years of experience have taught us the importance of sustainable practices, responsible
+                        resource management, and the need for global collaboration. We have engaged in tree planting
+                        campaigns, wildlife conservation efforts, clean energy advocacy, and educational outreach
+                        programs that have reached communities far and wide. Through these endeavors, we have
+                        witnessed positive changes, from cleaner air and water to thriving wildlife habitats. <br><br>
+                        Our journey is far from over. We remain committed to the cause of environmental
+                        conservation, continuously adapting to emerging challenges and opportunities. As we look to
+                        the future, we see a world that is more conscious of its environmental footprint and one
+                        that embraces the principles of sustainability and preservation. <br><br>
+                        Join us on our mission to protect and preserve our planet. With our years of expertise,
+                        dedication, and a vision for a sustainable future, we are determined to leave a lasting
+                        legacy of environmental stewardship for generations to come. Together, we can make a
+                        difference. <br><br>
+                        Thank you for being a part of our journey.
+                    </p>
+                    <div class="img"><img src="~/wwwroot/img/a2.jpg" alt=""></div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <span class="name">
+                EarthSavers Online &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"It's Time to
+                Eco-Revolutionize."
+            </span>
+            <div>
+                <span class="one">
+                    &emsp; &emsp; &emsp; &emsp; EarthSavers Online
+                </span>
+                <span class="two">
+                    Copright &copy 2023 Massey Xiaotong Chen
+                </span>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
+

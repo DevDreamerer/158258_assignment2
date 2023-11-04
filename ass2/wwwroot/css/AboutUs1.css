@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+/* 引入字体 */
+@font-face {
+    font-family: cac;
+    src: url('/wwwroot/font/cac_champagne.woff') format('woff');
+ }
+
+ /* 头部 */
+header{
+    height: 50px;
+    background-color: rgb(98, 141, 98);
+    display: flex;
+    justify-content: space-around;
+
+}
+
+/* 第一个div */
+header:first-child{
+    position: relative;
+}
+
+/* 头部图片设置 */
+header:first-child img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    
+}
+
+header:first-child span{
+    color: white;
+    line-height: 50px;
+    margin-left: 50px;
+}
+
+/* 头部中间的超链接 */
+.nav ul{
+    list-style-type: none;
+}
+
+.nav ul li{
+    float: left;
+    color: white;
+    line-height: 50px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav ul li:hover{
+    color:#43170354;
+    font-weight: bold;
+}
+
+.nav ul li.active{
+    font-weight: bold;
+    background-color: green;
+}
+
+/* 搜索 */
+.search{
+   margin-top: 13px;
+}
+
+.search input{
+    background-image: url(img/search.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: right center;
+}
+
+/* 登录、注册 */
+.log{
+    margin: 10px;
+    background-color: #086621b6;
+    border: 1px solid #086621b6;
+    border-radius: 10px ;
+}
+
+.log a{
+    text-decoration: none;
+    color: white;
+    font-family: Cascadia Code;
+}
+
+.log a:hover{
+    font-weight: bold;
+    color:#43170354;
+}
+
+section{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(244, 244, 210);
+    width: 100%;
+}
+
+/* 欢迎标语 */
+section .Welcome{
+    background-color:rgb(206, 232, 189) ;
+    font-weight: bold;
+    font-family: cac;
+    font-size: 25px;
+    word-spacing: 10px;
+    text-align: right;
+    color: black;
+    z-index: 1;
+    padding-right: 20px;
+    display: flex;
+    justify-content: end;
+}
+
+section .Welcome a{
+    color: rgb(171, 146, 102);
+}
+
+section .bottom{
+    flex: 1;
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+}
+
+section .left{
+    width: 30%;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+section .joinus{
+    border: 2px dotted rgb(72, 146, 206);
+    border-radius: 10px;
+}
+
+section .joinus .p1{
+    background-color: rgb(123, 174, 136);
+    color: white;
+    font-size:20px;
+    text-align: center;
+}
+
+section .joinus .p2{
+    padding: 35px;
+    background-color: rgba(241, 241, 182, 0.7);
+}
+
+section .contact{
+    border: 2px dotted rgb(72, 146, 206);
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+section .contact .d1{
+    background-color: rgb(123, 174, 136);
+    color: white;
+    font-size:20px;
+    text-align: center;
+}
+
+section .contact .d2, .d3{
+    display: flex;
+}
+
+section .contact .d2 img{
+    width: 10%;
+    padding-left: 30%;
+    padding-top: 5%;
+} 
+
+section .contact .d3 img{
+    width: 10%;
+    padding-left: 15%;
+    padding-top: 5%;
+}
+
+section .contact .d2 address{
+    /* float: right; */
+    padding-top: 7%;
+    padding-right: 30%;
+}
+
+section .contact .d3 address{
+    /* float: right; */
+    padding-top: 7%;
+    padding-right: 15%;
+}
+
+section .contact address a{
+    color: rgb(228, 177, 81);
+    font-weight: bold;
+}
+
+section .contact .d3{
+    padding-bottom: 15px;
+}
+section .contact .d4 .pic{
+    width: 10%;
+    padding-left: 45%;
+}
+
+section .contact .d4, .d2, .d3{
+    background-color: rgba(241, 241, 182, 0.7);
+}
+
+section .contact .d4 .map{
+    /* padding-top: 2%; */
+    /* padding-bottom: 2%; */
+    /* padding-left: 6%; */
+    width: 100%;
+}
+
+section .contact .d4 .map #container{
+    width: 100%;
+    height: 300px;
+    /* height: 100%; */
+    /* width: 200px; */
+    /* height: 200px; */
+}
+
+section .right {
+    position: relative;
+    width: 50%;
+    border: 2px dotted rgb(222, 200, 170);
+    border-radius: 10px;
+}
+
+section .right .heading{
+    text-align: center;
+    font-size: 20px;
+    color: #45a7d1;
+    text-shadow: 0px 0px 10px #46a6cf;
+}
+
+section .right .img{
+    position: absolute;
+    width: 45%;
+    top: 35px;
+    right: 0px;
+}
+
+section .right .img img{
+    width: 100%;
+    /* height: 20px; */
+}
+
+section .right p{
+    width: 50%;
+    text-align: left;
+    margin-left: 3%;
+    margin-top: 2%;
+    font-family: Constantia;
+    background-color: rgba(239, 224, 196, 0.3);
+    border-radius: 5px;
+}
+
+section .right{
+    width: 70%;
+}
+
+/* 底部 */
+footer{
+    width: 100%;
+    background-color: rgb(98, 141, 98);
+    display: flex;
+    justify-content: center;
+}
+
+/* 底部左边 */
+footer .name{
+    display: flex;
+    font-family: cac;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 70px;
+    margin-left: 20px;
+}
+
+/* 底部右边 */
+footer div{
+    flex:1 ;
+    flex-direction: column;
+    line-height: 35px;
+    font-size: 100%;
+}
+
+footer .two{
+    line-height: 70px;
+}

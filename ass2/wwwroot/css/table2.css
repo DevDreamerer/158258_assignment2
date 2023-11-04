@@ -1,0 +1,95 @@
+﻿/* styles.css */
+.main {
+    margin: 0;
+    padding: 10%;
+    background: linear-gradient(135deg,#f1dfb3, #ade3dc);
+    padding-left:15%;
+    padding-right:15%;
+}
+
+/* 标题样式 */
+h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+/* 水平分隔线样式 */
+hr {
+    border: none;
+    border-top: 1px solid #ade3dc;
+}
+
+
+/* 表单样式 */
+.form-horizontal {
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    /*padding: 20px;*/
+    /* border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;*/
+}
+
+/* 控件标签样式 */
+.control-label {
+    font-weight: bold;
+}
+
+/* 输入框和下拉菜单样式 */
+.form-control {
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* 错误消息样式 */
+.text-danger {
+    color: #ff0000;
+}
+
+/* 按钮样式 */
+.btn {
+    background-color: #e4ac61;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+    .btn:hover {
+        background-color: #ec9b2f;
+    }
+
+/* 链接样式 */
+a {
+    text-decoration: none;
+    color: #007BFF;
+    margin: 10px;
+    display: block;
+    text-align: center;
+}
+
+/* 表单部分样式 */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* 调整列的样式 */
+.col-md-2 {
+    width: 16.66667%;
+    float: left;
+    margin-right: 1%;
+}
+
+.col-md-10 {
+    width: 82.33333%;
+    float: left;
+}
